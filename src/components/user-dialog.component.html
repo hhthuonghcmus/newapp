@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>User List</h1>
+<div mat-dialog-content>
+  <mat-list>
+    <mat-list-item *ngFor="let user of data" style="height: 150px">
+      <div style="display: flex;">
+        <img [src]="user.avatar" alt="Avatar" matListAvatar>
+        <div>
+          <div matLine>First name: {{ user.first_name }}</div>
+          <div matLine>Last name: {{ user.last_name }}</div>
+          <div matLine>Email: {{ user.email }}</div>
+        </div>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close>Close</button>
+</div>
